@@ -1,0 +1,28 @@
+{
+  "name": "metric-anomaly-retro-workbench",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "指标异常复盘工作台：多信号触发、证据链、分派、修复任务、版本对比与关闭校验",
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,magenta \"node --watch server/index.js\" \"vite\"",
+    "build": "vite build",
+    "start": "NODE_ENV=production node server/index.js",
+    "test": "node --test 'server/tests/*.test.js'",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  }
+}
